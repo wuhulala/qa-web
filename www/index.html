@@ -1,0 +1,81 @@
+<!doctype html>
+<html ng-app="App">
+<head>
+    <meta charset="utf-8"/>
+    <title data-ng-bind="'QA | ' + $state.current.data.pageTitle"></title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!--==============================Common CSS========================================-->
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="node_modules/ng-table/bundles/ng-table.min.css" rel="stylesheet"/>
+    <link href="node_modules/ui-select/dist/select.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="node_modules/codemirror/theme/bespin.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/solarized-dark.css">
+    <link rel="stylesheet" href="assets/plugins/md/mdeditor-default.css">
+    <link href="assets/css/index.css" rel="stylesheet"/>
+    <link href="assets/css/sidebar.css" rel="stylesheet"/>
+
+    <!-- ================== END BASE CSS STYLE ================== -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <!-- ================== END BASE JS ================== -->
+
+
+    <!-- -->
+</head>
+<body>
+<div ui-view></div>
+     <!-- ================== BEGIN BASE ANGULAR JS ================== -->
+     <script src="node_modules/angular/angular.min.js"></script>
+     <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+     <script src="node_modules/angular-i18n/angular-locale_zh-cn.js"></script>
+     <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
+     <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+     <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+     <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+     <script src="node_modules/restangular/dist/restangular.min.js"></script>
+     <script src="node_modules/lodash/lodash.min.js"></script>
+     <script src="node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+     <script src="node_modules/ng-table/bundles/ng-table.min.js"></script>
+     <script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+     <script src="node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+
+     <!-- ================== BEGIN BASE JS ================== -->
+     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+     <script src="node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script>
+
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+     <script src="node_modules/ui-select/dist/select.min.js"></script>
+     <script src='node_modules/angular/angular.js'></script>
+     <script src='node_modules/codemirror/lib/codemirror.js'></script>
+     <script src='node_modules/codemirror/addon/mode/overlay.js'></script>
+     <script src='node_modules/codemirror/mode/gfm/gfm.js'></script>
+     <script src='node_modules/codemirror/mode/markdown/markdown.js'></script>
+     <script src='node_modules/codemirror/mode/xml/xml.js'></script>
+     <script src='node_modules/codemirror/mode/css/css.js'></script>
+     <script src='node_modules/codemirror/mode/javascript/javascript.js'></script>
+     <script src='node_modules/codemirror/mode/htmlmixed/htmlmixed.js'></script>
+     <script src='node_modules/codemirror/mode/clike/clike.js'></script>
+     <script src='node_modules/marked/lib/marked.js'></script>
+     <script src='assets/plugins/highlight/highlight.pack.js'></script>
+     <script src='assets/plugins/md/angular-mdeditor.js'></script>
+
+     <!-- ================== END BASE JS ================== -->
+
+     <!--==============================APP JS========================================-->
+     <script src="assets/js/app-router.js"></script>
+     <script src="assets/js/angular-service.js"></script>
+     <script src="assets/js/angular-controller.js"></script>
+     <script src="assets/js/angular-directive.js"></script>
+     <script src="config.js"></script>
+</body>
+</html>

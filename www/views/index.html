@@ -1,0 +1,67 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="jumbotron index-bg">
+            <div class="text-center">
+                <h1 style="color: white">QA</h1>
+                <h3 style="color: white">致力于降低新人接入的难度</h3>
+            </div>
+            <div class="container search-box">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6">
+                        <div class="input-group">
+                            <input class="col-sm-12 form-control" placeholder="insert question" type="text">
+                            <div class="input-group-addon" style="border: 0;padding: 0">
+                                <button class="btn btn-block"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" ng-controller="indexController">
+    <div class="row">
+        <div class="col-md-9">
+
+            <nav class="col-md-12 level-box">
+                <a class="level-menu-item " ng-class="{'active':config.nowLevel==1}" ng-click="changeItems(1)">技术</a>
+                <a class="level-menu-item" ng-class="{'active':config.nowLevel==2}" ng-click="changeItems(2)">业务</a>
+                <a class="level-menu-item" ng-class="{'active':config.nowLevel==3}" ng-click="changeItems(3)">框架</a>
+                <a class="level-menu-item" ng-class="{'active':config.nowLevel==4}" ng-click="changeItems(4)">生活</a>
+            </nav>
+            <div class="col-md-12 qa-box list-group">
+                <div class="container-fluid">
+                    <div href="#" class="col-md-12 qa-list-group-item" ng-repeat="item in qas">
+                        <div class="col-md-1">
+                            <span><img src="../assets/img/index/bg-1.png" class="img-circle img-avatar"></span>
+                        </div>
+                        <div class="col-md-8">
+                            <header class="q-name">{{item.name}}</header>
+                            <footer class="q-time">
+                                2017-03-10
+                            </footer>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="pull-right">
+                                <span class="label label-default">{{item.clickNumber}}</span>
+                                <span class="label label-primary">{{item.clickNumber}}</span>
+                                <span class="label label-success">{{item.clickNumber}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+            <a class="btn btn-info btn-create" ui-sref="app.addQuestion"><i class="fa fa-plus"></i>创建一个新的QA</a>
+            <div class="recommend-box">
+                <h4>排名最高的问题</h4>
+                <hr/>
+            </div>
+        </div>
+    </div>
+</div>

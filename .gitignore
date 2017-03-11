@@ -1,0 +1,4 @@
+/.idea
+*.iml
+/www/assets/js/angular-controller.js
+/www/assets/js/angular-service.js

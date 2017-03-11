@@ -1,0 +1,19 @@
+<div ng-controller="sidebarController">
+
+    <div class="sidebar-head">
+        <img src="assets/img/left-icon/logo.png" class="img-responsive" width="" height="">
+        <span style="color: #fff"> {{ identity.enterprise.name }} </span>
+    </div>
+    <div class="sidebar-top">
+        <ul class="nav">
+            <li ui-sref-active="active"><a href="javascript:;" ui-sref="app.home"><i class="fa map-icon"></i>主页</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar-bottom">
+        <ul class="nav ">
+            <li ui-sref-active="active"><a href="javascript:;" ng-click="logout();"><i class="fa icon logout-icon"></i>登出</a>
+            </li>
+        </ul>
+    </div>
+</div>
