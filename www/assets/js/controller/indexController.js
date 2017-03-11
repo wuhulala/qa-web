@@ -1,4 +1,4 @@
-App.controller('indexController', function ($scope) {
+App.controller('indexController', function ($scope,$state) {
 
     $scope.config = {
         nowLevel:1
@@ -7,69 +7,89 @@ App.controller('indexController', function ($scope) {
 
 
     var level1Items = [{
+        id:1,
         name: "level1_1",
         clickNumber: 11
     }, {
+        id:2,
         name: "level1_2",
         clickNumber: 11
     }, {
+        id:3,
         name: "level1_3",
         clickNumber: 11
     }, {
+        id:4,
         name: "level1_4",
         clickNumber: 11
     }, {
+        id:5,
         name: "level1_5",
         clickNumber: 11
     }];
 
     var level2Items = [{
+        id:6,
         name: "level2_1",
         clickNumber: 21
     }, {
+        id:7,
         name: "level2_2",
         clickNumber: 12
     }, {
+        id:8,
         name: "level2_3",
         clickNumber: 112
     }, {
+        id:9,
         name: "level2_4",
         clickNumber: 121
     }, {
+        id:10,
         name: "level2_5",
         clickNumber: 1221
     }];
 
     var level3Items = [{
+        id:10,
         name: "level3_1",
         clickNumber: 11
     }, {
+        id:10,
         name: "level3_2",
         clickNumber: 131
     }, {
+        id:10,
         name: "level3_3",
         clickNumber: 311
     }, {
+        id:10,
         name: "level3_4",
         clickNumber: 1331
     }, {
+        id:10,
         name: "level3_5",
         clickNumber: 113
     }];
 
     var level4Items = [{
+        id:10,
         name: "level1_1",
         clickNumber: 411
     }, {
+        id:10,
         name: "level4_2",
         clickNumber: 141
     }, {
+        id:10,
         name: "level1_3",
         clickNumber: 114
     }, {
+        id:10,
         name: "level4_4",
         clickNumber: 1441
     }, {
+        id:10,
         name: "level4_5",
         clickNumber: 14441
     }];
@@ -96,6 +116,10 @@ App.controller('indexController', function ($scope) {
                 $scope.config.nowLevel = 4;
                 break;
         }
+    }
+
+    $scope.showDetail = function (id) {
+        $state.go('app.qaDetail',{id:id});
     }
 
 });

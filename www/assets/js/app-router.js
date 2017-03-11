@@ -10,6 +10,10 @@ var App = angular.module('App', [
 App.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/app/index');
     $stateProvider
+        .state('404', {
+            url: '/404',
+            templateUrl: 'template/404.html'
+        })
         .state('app', {
             url: '/app',
             templateUrl: 'template/app.html',
@@ -26,7 +30,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/addQuestion.html'
         })
         .state('app.qaDetail', {
-            url: '/qaDetail',
+            url: '/qaDetail?id',
             data: { pageTitle: '问题详情' },
             templateUrl: 'views/qaDetail.html'
         })
