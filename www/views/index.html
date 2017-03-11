@@ -33,25 +33,7 @@
             </nav>
             <div class="col-md-12 qa-box list-group">
                 <div class="container-fluid">
-                    <div ng-click="showDetail(item.id)"  class="col-md-12 qa-list-group-item" ng-repeat="item in qas">
-                        <div class="col-md-1">
-                            <span><img src="../assets/img/index/bg-1.png" class="img-circle img-avatar"></span>
-                        </div>
-                        <div class="col-md-8">
-                            <header class="q-name">{{item.name}}</header>
-                            <footer class="q-time">
-                                2017-03-10
-                            </footer>
-                        </div>
-                        <div class="col-md-3 ">
-                            <div class="pull-right">
-                                <span class="label label-default">{{item.clickNumber}}</span>
-                                <span class="label label-primary">{{item.clickNumber}}</span>
-                                <span class="label label-success">{{item.clickNumber}}</span>
-                            </div>
-                        </div>
-
-                    </div>
+                    <qaitem qas="qas"></qaitem>
                 </div>
             </div>
         </div>

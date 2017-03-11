@@ -25,12 +25,12 @@ App.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'views/index.html'
         })
         .state('app.addQuestion', {
-            url: '/addQuestion',
+            url: '/qa',
             data: { pageTitle: '添加问题' },
             templateUrl: 'views/addQuestion.html'
         })
         .state('app.qaDetail', {
-            url: '/qaDetail?id',
+            url: '/qa/detail?id',
             data: { pageTitle: '问题详情' },
             templateUrl: 'views/qaDetail.html'
         })
