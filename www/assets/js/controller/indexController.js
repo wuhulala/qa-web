@@ -9,11 +9,16 @@ App.controller('indexController', function ($scope,$state) {
     var level1Items = [{
         id:1,
         name: "level1_1",
-        clickNumber: 11
+        readNumber: 11,
+        likeNumber: 121,
+        replyNumber: 1,
+        time:1489248078000
     }, {
         id:2,
         name: "level1_2",
-        clickNumber: 11
+        readNumber: 31,
+        likeNumber: 1221,
+        replyNumber: 1
     }, {
         id:3,
         name: "level1_3",
