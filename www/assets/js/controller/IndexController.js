@@ -1,4 +1,4 @@
-App.controller('indexController', function ($scope,$state) {
+App.controller('IndexController', function ($scope,$state,QaService) {
 
     $scope.config = {
         nowLevel:1
@@ -101,7 +101,10 @@ App.controller('indexController', function ($scope,$state) {
 
     $scope.qas = level1Items;
 
-
+    //初始化最新QA栏目
+    QaService.getLeast().then(function (result) {
+        $scope.leastQa = result.data;
+    });
     $scope.changeItems = function (type) {
         switch (type) {
             case 1:

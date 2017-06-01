@@ -65,13 +65,13 @@
 	-moz-box-sizing:border-box;
 } */
 .mdeditor-textarea,.mdeditor-preview{
-	height: 800px;
+	min-height: 600px;
 	background-color: white;
-	/* font-family: Consolas,'为微软雅黑'; */
 }
 .mdeditor-preview{
-	padding: 5px;
-	overflow-y:auto;
+	padding:15px;
+	border-radius: 8px;
+	background: #faffff;
 }
 :fullscreen{height: 100% !important;}
 :-webkit-full-screen{height: 100% !important;}

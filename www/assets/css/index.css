@@ -1,25 +1,38 @@
 body {
-    background-color: #d5dbcf;
+    background-color: #f5f7f9;
+    font-family: Consolas,'微软雅黑';
+}
+
+.logo{
+    position: absolute;
+    top: -2px;
+}
+
+.CodeMirror-vscrollbar {
+    right: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /**===================================navbar===============================*/
 .navbar-inverse{
-    background-color: #22B9ED;
+    background-color: #a5adb3;
     color: white;
     border: 1px rgba(251, 244, 255, 0.25) solid;
 }
 
 .navbar-inverse .navbar-brand{
-    color: whitesmoke;
+    color: white;
 }
 .navbar-inverse .navbar-nav>li>a {
-    color: whitesmoke;
+    color: white;
 }
 
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
-    background-color: #22B9ED
+    background-color: #a5adb3
 }
 .dropdown-menu{
-    background-color: rgba(34, 185, 237, 0.59);
+    background-color: #a5adb3;
 }
 .dropdown-menu>li>a {
     display: block;
@@ -27,29 +40,28 @@ body {
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    color: antiquewhite;
+    color: white;
     white-space: nowrap;
-    background-color: rgba(34, 185, 237, 0.59);
+    background-color: #a5adb3;
 }
 
 
 /**===================================footer===============================*/
 .footer{
-    background-color: #22B9ED;
-
+    border-top: 2px #a5adb3 dashed;
+    padding: 10px;
 }
 
 .footer-item{
     padding: 5px;
-    color: #ff7b7e;
+    color: #c0d0ed;
 }
 
 .footer-item a {
-    color: #d5dbcf;
+    color: #d2d2d2;
 }
 
 table {
-    table-layout: fixed;
     word-wrap: break-word;
 }
 
@@ -59,28 +71,38 @@ div {
 
 /**===================================index===============================*/
 .index-bg {
-    background-color: #22B9ED;
-    height: 405px;
+    background-color: #dde7ed;
+    height: 200px;
 }
 
 .search-box {
     padding: 50px;
 }
-
+.search-input{
+    font: 200 25px "microsoft yahei";
+    height: 40px;
+    border: 0;
+    padding: 0 12px;
+    margin: 0;
+    box-shadow: none !important;
+}
 .btn-create {
     width: 200px;
     height: 50px;
-    background-color: #22B9ED;
+    background-color: #dde7ed;
     border-radius: 0;
     line-height: 35px;
     font-size: 20px;
     font-weight: lighter;
 }
-
+.btn-create:hover{
+    color: white;
+    background: #a5adb3;
+}
 .btn-level {
     width: 100px;
     height: 50px;
-    background-color: #13b6ed;
+    background-color: #dde7ed;
     border-radius: 0;
     line-height: 35px;
     font-size: 20px;
@@ -113,8 +135,8 @@ div {
 }
 
 .level-menu-item.active, .level-menu-item:hover {
-    color: #22B9ED;
-    border-bottom: 2px #22B9ED solid;
+    color: #dde7ed;
+    border-bottom: 2px #dde7ed solid;
 }
 
 .qa-box {
@@ -129,7 +151,7 @@ div {
 .qa-list-group-item {
     cursor: pointer;
     padding: 15px;
-    border-bottom: 1px rgba(255, 0, 0, 0.13) solid;
+    border-bottom: 1px rgba(255, 0, 0, 0.13) dashed;
 }
 
 .label {
@@ -158,4 +180,30 @@ div {
     padding: 2px;
     width: 50px;
     height: 50px;
+}
+
+/**===================================addQa page===============================*/
+
+.add-title-wrapper{
+    padding-bottom: 10px;
+    border-bottom: 2px #a5adb3 dashed;
+    margin-bottom: 20px;
+}
+.add-title{
+    font: 200 25px "microsoft yahei";
+    height: 40px;
+    border: 0;
+    padding: 0 12px;
+    margin: 0;
+    box-shadow: none !important;
+}
+
+.add-page-button-wrapper{
+    margin-top: 15px;
+}
+
+.post-button{
+    padding-left: 20px;
+    padding-right: 20px;
+
 }

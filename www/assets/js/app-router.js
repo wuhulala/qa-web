@@ -14,6 +14,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
             url: '/404',
             templateUrl: 'template/404.html'
         })
+        .state('login', {
+            url: '/login',
+            templateUrl: 'views/login.html'
+        })
         .state('app', {
             url: '/app',
             templateUrl: 'template/app.html',
@@ -38,6 +42,14 @@ App.config(function($stateProvider, $urlRouterProvider) {
 
 
 App.run(function ($rootScope, $state, API_URL, Restangular, $cookieStore) {
+
+    //跳转页面设置滑动条在顶部
+    $rootScope.$on('$stateChangeStart',function () {
+        $(window).scrollTop(0);
+    });
+
+
+
     Restangular.setBaseUrl(API_URL);
     /*$rootScope.identity = $cookieStore.get('identity');
     console.log("run----------"+$rootScope.identity);
@@ -60,11 +72,13 @@ App.run(function ($rootScope, $state, API_URL, Restangular, $cookieStore) {
         return elem;
     });*/
     Restangular.setResponseInterceptor(function (data, operation, what, url, response, deferred) {
-        if (data.returnCode == 'CODE_1004') {
+        if (data.meta.code == '578') {
             deferred.reject(data);
-            $cookieStore.put("errorMsg",data.resultMsg);
+            $cookieStore.put("errorMsg",data.meta.msg);
             $state.go('login');
         } else {
+            console.log("Internet data: ");
+            console.log(data);
             return data;
         }
     });
@@ -72,6 +86,8 @@ App.run(function ($rootScope, $state, API_URL, Restangular, $cookieStore) {
 
 App.run(function ($rootScope, $state,$cookieStore) {
     $rootScope.$state = $state;
-    $rootScope.identity = $cookieStore.get('identity');
+    $rootScope.identity ={
+        "mobile":"测试用户"
+    };
     $rootScope.errorMsg = $cookieStore.get('errorMsg');
 });

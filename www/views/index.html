@@ -2,17 +2,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="jumbotron index-bg">
-            <div class="text-center">
-                <h1 style="color: white">QA</h1>
-                <h3 style="color: white">致力于降低新人接入的难度</h3>
-            </div>
             <div class="container search-box">
                 <div class="row">
                     <div class="col-md-offset-3 col-md-6">
                         <div class="input-group">
-                            <input class="col-sm-12 form-control" placeholder="insert question" type="text">
+                            <input class="col-sm-12 form-control search-input" placeholder="search" type="text">
                             <div class="input-group-addon" style="border: 0;padding: 0">
-                                <button class="btn btn-block"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-block " style="height: 40px"><i class="fa fa-search"></i></button>
                             </div>
                         </div>
                     </div>
@@ -21,7 +17,7 @@
         </div>
     </div>
 </div>
-<div class="container" ng-controller="indexController">
+<div class="container" ng-controller="IndexController">
     <div class="row">
         <div class="col-md-9">
 
@@ -39,10 +35,13 @@
         </div>
         <div class="col-md-3">
 
-            <a class="btn btn-info btn-create" ui-sref="app.addQuestion"><i class="fa fa-plus"></i>创建一个新的QA</a>
+            <a class="btn btn-default btn-create" ui-sref="app.addQuestion"><i class="fa fa-plus"></i>&nbsp;Add Qa</a>
             <div class="recommend-box">
-                <h4>排名最高的问题</h4>
+                <h4>Least</h4>
                 <hr/>
+                <div ng-click="showDetail(item.id)"  class="col-md-12 qa-list-group-item" ng-repeat="item in leastQa">
+                    {{item.title}}
+                </div>
             </div>
         </div>
     </div>

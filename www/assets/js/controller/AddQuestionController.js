@@ -1,4 +1,4 @@
-App.controller('addQuestionController', function ($scope, $http) {
+App.controller('addQuestionController', function ($scope,$state,QaService) {
     $scope.toolbar=[
         {action:'bold',icon:'fa fa-bold',tip:'加粗(Ctrl+B)'},
         {action:'italic',icon:'fa fa-italic',tip:'斜体(Ctrl+I)'},
@@ -38,8 +38,24 @@ App.controller('addQuestionController', function ($scope, $http) {
             'Ctrl-L':'link',
             'Ctrl-G':'img'
     };
-    $scope.text='### 标题\n'+
-        '```\nconsole.log(Array.every(classes, Boolean));\n```\n'+
-        '```javascript\nconsole.log(Array.every(classes, Boolean));\n```\n'+
-        '```xml\n<html>\n\t<head>\n\t</head>\n\t<body>\n\t</body>\n</html>\n```';
+    $scope.text='Qa content';
+
+    //添加一个新的Qa
+    $scope.addQa = function () {
+        var newQa = {
+            "authorId": 1,
+            "content": $scope.text,
+            "img": "",
+            "title": $scope.title
+        };
+
+        QaService.add(newQa).then(function (result) {
+            var code = result.meta.code;
+            if(code == 200){
+                alert("添加成功");
+                $state.go('app.index');
+            }
+            console.log(result);
+        });
+    }
 });
