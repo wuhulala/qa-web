@@ -8,7 +8,7 @@ var App = angular.module('App', [
     'ngTable'
 ]);
 App.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/app/index');
+    $urlRouterProvider.otherwise('/login');
     $stateProvider
         .state('404', {
             url: '/404',
@@ -16,6 +16,7 @@ App.config(function($stateProvider, $urlRouterProvider) {
         })
         .state('login', {
             url: '/login',
+            data: { pageTitle: '登录' },
             templateUrl: 'views/login.html'
         })
         .state('app', {
@@ -77,8 +78,8 @@ App.run(function ($rootScope, $state, API_URL, Restangular, $cookieStore) {
             $cookieStore.put("errorMsg",data.meta.msg);
             $state.go('login');
         } else {
-            console.log("Internet data: ");
-            console.log(data);
+           // console.log("Internet data: ");
+            //console.log(data);
             return data;
         }
     });
@@ -86,8 +87,6 @@ App.run(function ($rootScope, $state, API_URL, Restangular, $cookieStore) {
 
 App.run(function ($rootScope, $state,$cookieStore) {
     $rootScope.$state = $state;
-    $rootScope.identity ={
-        "mobile":"测试用户"
-    };
+    $rootScope.identity = $cookieStore.get('identity');
     $rootScope.errorMsg = $cookieStore.get('errorMsg');
 });

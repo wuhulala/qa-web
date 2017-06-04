@@ -1,4 +1,4 @@
-App.controller('headerController', function ($scope, $rootScope, $state, Restangular, userService, $cookieStore) {
+App.controller('headerController', function ($scope, $rootScope, $state, Restangular, $cookieStore) {
     $scope.logout = function () {
         if (confirm('确认要退出登录吗？')) {
             /*$cookieStore.put('identity', null);

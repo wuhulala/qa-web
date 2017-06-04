@@ -50,6 +50,7 @@ gulp.task('reload', function () {
 //使用connect启动一个Web服务器
 gulp.task('connect', function () {
     connect.server({
+        port: 8888,
         root: 'www',
         livereload: true
     });

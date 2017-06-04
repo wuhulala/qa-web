@@ -1,6 +1,6 @@
 // JavaScript source code
-App.factory('userService', ['Restangular', function (Restangular) {
-    var res = Restangular.all('');
+App.factory('UserService', ['Restangular', function (Restangular) {
+    var res = Restangular.all('account');
     return {
         get: function (id) {
             res.one(id).get();
@@ -47,11 +47,7 @@ App.factory('userService', ['Restangular', function (Restangular) {
             return res.one('user').customDELETE(id);
         },
         login: function (loginUser) {
-
-            var date_encoded = $.param(loginUser);
-            var header =  { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'};
-            return res.all('session').post(date_encoded,undefined,header)
-
+            return res.all('login').post(loginUser);
         },
         logout: function (token) {
             return res.one('session/').remove({

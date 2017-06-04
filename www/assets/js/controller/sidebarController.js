@@ -1,4 +1,4 @@
-App.controller('sidebarController', function ($scope, $rootScope, $state, userService,$cookieStore) {
+App.controller('sidebarController', function ($scope, $rootScope, $state,$cookieStore) {
     $scope.logout = function () {
         if (confirm('确认要退出登录吗？')) {         //退出登录
            /* userService.logout($rootScope.identity.admin.token).then(function () {

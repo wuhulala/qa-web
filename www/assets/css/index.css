@@ -95,6 +95,20 @@ div {
     font-size: 20px;
     font-weight: lighter;
 }
+.btn-login{
+    height: 50px;
+    background-color: #dde7ed;
+    border-radius: 0;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: lighter;
+    width: 50%;
+}
+.btn-login:hover{
+    color: white;
+    background: #a5adb3;
+    width: 100%;
+}
 .btn-create:hover{
     color: white;
     background: #a5adb3;
@@ -206,4 +220,10 @@ div {
     padding-left: 20px;
     padding-right: 20px;
 
+}
+
+/**===================================login page===============================*/
+.login-content{
+    margin-top: 10%;
+    padding: 20px;
 }
