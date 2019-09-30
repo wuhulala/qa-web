@@ -16,7 +16,7 @@
     "ng-table": "~2.0.2",
     "ui-select": "~0.19.6",
     "restangular": "~1.5.2",
-    "bootstrap": "~3.3.7",
+    "bootstrap": "~3.4.1",
     "font-awesome": "~4.7.0",
     "jquery": "~1.12.4",
     "jquery-migrate": "~1.4.1",
